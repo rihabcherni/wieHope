@@ -1,0 +1,91 @@
+<div>
+<!-- =========================== cards ======================= -->
+<div *ngIf="statistics" class="cardsBox">
+    <div class="cardDash c1">
+      <div class="cardbody">
+        <div class="cardLigne">
+          <h4>{{ statistics?.nb_unique_schools }} / {{ statistics?.nb_schools }}</h4>
+          <h3><i class="fas fa-school" ></i></h3>
+        </div>
+        <p>Schools Supported Through Your Donations</p>
+      </div>
+    </div>
+    <div class="cardDash c2">
+      <div class="cardbody ">
+        <div class="cardLigne">
+          <h4> {{ statistics?.nb_unique_donations }} / {{ statistics?.nb_allDonations }}</h4>
+          <h3><i class="fas fa-hand-holding-usd" ></i></h3>
+        </div>
+        <p>Number of your donations</p>
+      </div>
+    </div>
+    <div class="cardDash c3">
+            <div class="cardbody">
+              <div class="cardLigne">
+                <h4> {{ statistics?.nb_donors }} </h4>
+                <h3> <i class="fas fa-users"></i></h3>
+              </div>
+              <p>Total number of donors</p>
+            </div>
+    </div>
+  </div>
+  <!-- ================ Order Details List ================= -->
+  <div class="details">
+    <div>
+      <div class="row">
+        <div class=" recentOrders">
+          <div class="cardHeader">
+              <h2>Latest Donations</h2>
+              <a [routerLink]="['/donor/history-donations']" class="btn">View All</a>
+          </div>
+           <div *ngIf="lastDonation && lastDonation.length > 0">
+            <table class="tab-donation">
+                <thead>
+                    <tr class="color-title">
+                        <td>School</td>
+                        <td>Date</td>
+                        <td>Donation Items</td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let donation of lastDonation">
+                    <td>{{ donation.school.name }}</td>
+                    <td>
+                     {{ donation.dateDonation }}
+                    </td>
+                    <td class="chips">
+                      <p *ngFor="let details of donation.donationDetails">
+                         {{ details.number }} {{ details.itemType }}
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
+            <div class="center-chart">
+              <div id="BarChart">
+                <canvas id="statisticsBarChartDonation" ></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div>
+    <div class=" recentCustomers">
+      <div class="cardHeader">
+          <h4>Schools need help</h4>
+          <a [routerLink]="['/donor/schools-needs']" class="btn">View All</a>
+      </div>
+      <div *ngIf="lastSchool && lastSchool.length > 0">
+        <table>
+          <tr *ngFor="let school of lastSchool">
+              <td>
+                <h4>{{ school.name }} (<span>{{ school.governorate }}) </span></h4>
+                <span style="font-size: 12px;"><b>Needs: </b>{{ school.type_needs }} </span>
+              </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

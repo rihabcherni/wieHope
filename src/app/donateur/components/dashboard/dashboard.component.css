@@ -1,0 +1,81 @@
+.cardsBox {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+}
+.cardDash {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.cardLigne{
+  display: flex;
+  justify-content: space-between;
+}
+.cardDash{
+  color:rgb(85, 85, 85);
+}
+
+.cardDash p{
+  font-size: 14px;
+}
+.c1 i , .c1 h4{
+  color:rgb(105, 186, 191) !important;
+}
+.c2 i, .c2 h4{
+  color:#fa7e71 !important;
+}
+.c3 i, .c3 h4{
+  color:rgb(11, 11, 133) !important;
+}
+.cardDash:hover {
+  transform: scale(1.05);
+  background-color: var(--primary) !important;
+  color: white !important;
+  font-weight: bold;
+}
+.cardDash h2 {
+  margin-top: 0;
+}
+
+/* Media Queries */
+@media (min-width: 800px) {
+  .cardsBox {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 599px) {
+  .cardsBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.chips p{
+  background-color: #8614c9;
+  margin: 4px 2px !important;
+  padding: 4px ;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+}
+.color-title{
+  color:#8614c9 !important;
+}
+
+#BarChart {
+  width: 100%;
+  background-color: white;
+  padding: 5px 20px;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(108, 1, 132, 0.136);
+}
+.center-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,30 @@
+.about-header::before,
+.about-header::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10px;
+  top: 0;
+  left: 0;
+  background: url(../../../../assets/img/bg-header-top.png) center center repeat-x;
+  z-index: 9999;
+}
+.about-header::after {
+  height: 19px;
+  top: auto;
+  bottom: 0;
+  background: url(../../../../assets/img/bg-header-bottom.png) center center repeat-x;
+}
+.about-header {
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../../../../assets/img/visiteur/ph4.jpg) center center no-repeat !important;
+  background-size: cover !important;
+}
+
+.about-header a{
+  color: rgb(73, 3, 80) !important;
+}
+.about-header li{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -20px;
+}

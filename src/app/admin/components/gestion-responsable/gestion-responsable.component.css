@@ -1,0 +1,55 @@
+.btn-supprimer-donation {
+  background-color: #dc3545;
+  width: 50px;
+  height: 35px;
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+.btn-supprimer-donation:hover{
+  cursor: pointer;
+  background-color: white;
+  color:rgb(181, 0, 0) !important;
+  border:#dc3545 3px solid !important;
+  border-radius: 5px;
+}
+.r-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+table{
+  font-size: 14px !important;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 60%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}

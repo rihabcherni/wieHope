@@ -1,0 +1,57 @@
+h4{
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+
+}
+.input{
+  margin-top: 1rem;
+}
+.form-control{
+  border-radius: 0;
+  height: 3rem;
+}
+.labels{
+  color: black;
+}
+
+.cardd {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-radius: 10px;
+}
+
+input:focus{
+  box-shadow:  0 0 0 .25rem #d2bfee;
+  border-color: #9c76d6;
+}
+.cardetitle{
+  font-size: 1.25rem;
+  margin-bottom: .5rem;
+font-family: "Inter",sans-serif;
+color: #4f1f9c;
+}
+.btn:focus{
+  box-shadow: none;
+}
+
+
+.profil-container{
+  display: grid;
+  grid-template-columns: 28% 70%;
+  gap: 2%;
+  margin: -8rem 2rem 0;
+}
+.profil-container2{
+  margin: 1rem 2rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-radius: 10px;
+}

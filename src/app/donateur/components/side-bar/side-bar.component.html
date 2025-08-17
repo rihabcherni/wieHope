@@ -1,0 +1,50 @@
+
+<div class="navigation" [ngClass]="{'closed': !isSidebarOpen}">
+  <ul>
+    <li class="logo-sidebar" [ngClass]="{'closed-logo': !isSidebarOpen}">
+      <a [routerLink]="['/donor']">
+        <img src="../../assets/img/visiteur/logo2.png" style="height: 68px;" alt="logo" [ngStyle]="{ 'border-radius': '50%' }" />
+        <h3 class="title mauve">WieHope</h3>
+      </a>
+    </li>
+    <li *ngFor="let link of sidebarLinks" [ngClass]="{'active': link.routerLink === activeLink}">
+      <a [routerLink]="[link.routerLink]" *ngIf="link.title === 'Sign Out'" (click)="logout()">
+        <span class="icon">
+          <i [class]="link.iconClass"></i>
+        </span>
+        <span class="title">{{ link.title }}</span>
+      </a>
+      <a [routerLink]="[link.routerLink]"  *ngIf="link.title !== 'Sign Out'"  (click)="activeLink = link.routerLink">
+        <span class="icon">
+          <i [class]="link.iconClass"></i>
+        </span>
+        <span class="title">{{ link.title }}</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="topbar">
+  <div></div>
+  <div class="toggle-back" (click)="onToggleSidebar()" [ngClass]="{'closed-toggle-back': !isSidebarOpen}">
+    <i class="fas fa-bars material-icons"></i>
+  </div>
+  <div class="search">
+    <label class="search-label">
+      <input type="text" placeholder="Search here">
+      <i class="fas fa-search"></i>
+    </label>
+</div>
+  <div></div>
+  <div class="row2">
+    <b>{{ nameUser }}</b>
+    <div class="user" (click)="toggleDropdown()">
+        <img src="http://localhost:5000/uploads/userProfile/{{ photo }}" alt="">
+    </div>
+    <div *ngIf="isDropdownOpen" class="dropdown">
+      <a (click)="logout()" class="s2"><b class="mx-3">Logout </b> <i class="fas fa-sign-out-alt"></i> </a>
+      <hr/>
+      <a (click)="changePassword()" class="s2"><b class="mx-3">Update Password </b> <i class="fas fa-key"></i> </a>
+    </div>
+  </div>
+</div>

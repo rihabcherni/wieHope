@@ -1,0 +1,112 @@
+.card:hover{
+    background-color: transparent;
+  }
+  .cardb{
+    padding: 1rem 1rem;
+  }
+  
+  .cardHeader{
+    display: flex;
+    gap: 1rem;
+  
+  }
+  .title{
+    margin: 1rem 0;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+  }
+  .acceptbtn{
+    background-color: #00a297;
+    cursor: pointer;
+  }
+  .rejectbtn{
+    background-color: red;
+    cursor: pointer;
+  }
+  .btninfo{
+    background-color: #7b4fc1;
+    color: rgb(255, 255, 255);
+    font-size: 14px !important;
+  }
+  .schoolname,.schoollocation{
+    display: flex;
+    flex-direction: row;
+  }
+  .cardtitle{
+    font-size: 1.25rem;
+    font-family: "Inter",sans-serif;
+    line-height: 1.2;
+    color: #4f1f9c;
+  }
+  
+  .btn:focus{
+    box-shadow: none;
+  }
+  
+  .back{
+      position: relative;
+      min-height: 500px;
+      margin: 10px 0;
+      padding: 20px;
+      background: var(--white);
+      box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+      border-radius: 20px;
+  }
+  
+  
+  
+  
+  .table-school th{
+    color: #7b4fc1 !important;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .table-school td{
+    font-size: 14px;
+  }
+  .table-school button{
+    font-size: 12px;
+    padding: 5px;
+  }
+  /* school-details-dialog.component.css */
+  
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .modal-content1 {
+    background: #fff;
+    padding: 20px;
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+  }
+  

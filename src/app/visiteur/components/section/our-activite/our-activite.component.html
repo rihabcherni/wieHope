@@ -1,0 +1,37 @@
+<div class="container-xxl py-5">
+  <div class="container" class="text-center">
+    <section id="best">
+      <h1 class="mb-4 font-awesome" style="margin-top: -50px;">Join Us</h1>
+      <div class="row d-flex justify-content-centermb-4 ">
+        <div class="mb-4">
+          <p class="mx-5">
+            Discover the chance to align yourself with a community driven by a noble cause through our website. Your participation can foster positive change, and you have the flexibility to engage with us as a donor, or take on significant roles such as a school director or
+            professor. Join us in making a meaningful impact and contributing to the betterment of our shared goals.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="row">
+      <div class="col-md-6 mb-4" *ngFor="let a of acteur">
+        <i [ngClass]="a.icon" style='color: #7b4fc1; font-size: 80px;'></i>
+        <h4 class="my-4">{{ a.role }}</h4>
+        <div *ngIf="!a.showMore" >
+          <p class="mx-5">
+            {{ a.text | slice: 0:250 }}...
+            <span *ngIf="!a.showMore">
+              <a style="cursor: pointer; color: #7b4fc1; font-weight: bold;" (click)="a.showMore =true">Read More</a>
+            </span>
+          </p>
+        </div>
+        <div *ngIf="a.showMore">
+          <p class="mx-5">
+            {{ a.text }}
+            <span *ngIf="a.showMore">
+              <a style="cursor: pointer; color: #7b4fc1; font-weight: bold;" (click)="a.showMore =false">Read Less</a>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+ <!-- ================= Schools Requests ================ -->
+ <div class="back">
+    <h2 class="title">Schools Requests and Initiatives</h2>
+     <div class="card mb-3" *ngFor="let d of demande" >
+         <div class="row g-0">
+             <div class="col-md-3 px-2" style="display: flex;justify-content: center;align-items: center;">
+                 <img src="../../assets/img/visiteur/school1.jpg"  class="img-fluid rounded-start" alt="">
+             </div>
+             <div class="col-md-9">
+                 <div class="cardb">
+                     <h5 class="cardtitle">{{ d.type_needs }}</h5>
+                     <div class="schoolname"><h6>School Name : </h6><p>{{ d.name }}</p></div>
+                     <div class="schoollocation"><h6>Location : </h6><p>{{ d.address }}, {{ d.governorate }}</p></div>
+                     <h6></h6>
+                     <p>{{ d.needs }}</p>
+                     <div class="cardHeader justify-content-end">
+                        <button type="button" class="btn btn-primary" (click)="openDetailsModal(d)">View Details</button>
+                         <button type="button" class="btn btn-light" (click)="openDetailsModal2(d)">Donate</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+  </div>
+  <!-- ================= New Customers ================ -->
+   
+
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <span class="modal-close" (click)="onNoClick()">&times;</span>
+      <h2>School Details</h2>
+
+      <div *ngIf="selectedSchool">
+        <p><strong>School Name:</strong> {{ selectedSchool.name }}</p>
+        <p><strong>Location:</strong> {{ selectedSchool.address }}, {{ selectedSchool.governorate }}</p>
+        <p><strong>Number of Students:</strong> {{ selectedSchool.nbr_student }}</p>
+        <p><strong>Number of Teachers:</strong> {{ selectedSchool.nbr_teachers }}</p>
+        <p><strong>Type needs:</strong>{{ selectedSchool.type_needs }}</p>
+        <p><strong>Needs:</strong>{{ selectedSchool.needs }}</p>
+    </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal-overlay" id="modal2">
+    <div class="modal-content">
+      <span class="modal-close" (click)="onNoClick2()">&times;</span>
+      <div *ngIf="selectedSchool3">
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <h1 class="mb-4 text-center">Donate</h1>
+              <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="typeNeeds">Type needs:</label>
+                  <input type="text" class="form-control" id="typeNeeds" [(ngModel)]="selectedSchool3.type_needs" name="typeNeeds">
+                </div>
+                <div class="form-group">
+                  <label for="needs">Quantity:</label>
+                  <input type="text" class="form-control" id="needs" [(ngModel)]="selectedSchool3.needs" name="needs">
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 5px; text-align: center; width: 150px;"(click)="openDetailsModal3()">Donate</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  
+  <div class="modal-overlay" id="modal3">
+    <div class="modal-content">
+      <span class="modal-close" (click)="onNoClick3()">&times;</span>
+        <h4>Thank you !</h4>
+    </div>
+   
+  </div>
+
+  
+  
+
+
+
+
+
+

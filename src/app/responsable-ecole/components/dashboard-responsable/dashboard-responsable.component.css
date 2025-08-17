@@ -1,0 +1,112 @@
+/* #BarChart {
+    width: 350px;
+    height: 250px;
+    margin: 35px auto;
+  }
+  #LineChart{
+    width: 500px;
+    height: 250px;
+    margin: 35px auto;
+  } */
+  /* Styles pour les graphiques */
+  .cardsBox {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+  }
+ /* .cardDash {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  } */
+
+  .cardDash:hover {
+    transform: scale(1.05);
+    background-color: var(--primary);
+    color: white !important;
+    font-weight: bold;
+  }
+  .cardDash img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .cardDash h2 {
+    margin-top: 0;
+  }
+
+  /* Media Queries */
+  @media (min-width: 1200px) {
+    .cardsBox {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 1199px) and (min-width: 600px) {
+    .cardsBox {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 599px) {
+    .cardsBox {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .cardsBox {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+  }
+  .cardDash {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  .cardDash:hover {
+    transform: scale(1.05);
+    background-color: var(--primary);
+    color: white !important;
+    font-weight: bold;
+  }
+  .cardDash img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .cardDash h2 {
+    margin-top: 0;
+  }
+
+  /* Media Queries */
+  @media (min-width: 800px) {
+    .cardsBox {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+
+  @media (max-width: 599px) {
+    .cardsBox {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .tab-donation tbody :hover{
+    background-color: rgb(177, 51, 216);
+    color: white;
+  }
+
+
+  .tab-donation thead td{
+    color: rgb(177, 51, 216) !important;
+    font-size: 18px;
+    font-weight: bold;
+  }

@@ -1,0 +1,55 @@
+<div class=" details row ">
+  <div class="cardHeader">
+      <h2>Donations</h2>
+  </div>
+</div>
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item castom-border mb-2" *ngFor="let d of donation; let i = index">
+    <div class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="true" [attr.aria-controls]="'collapse' + i">
+        <div class="row-accordion">
+          <div class="border-right"><b>Donation To :</b> {{ d.school.name }}</div>
+          <div><b>Donation Date :</b> {{ d.formattedDate }}</div>
+        </div>
+      </button>
+    </div>
+    <div id="collapse{{ i }}" class="accordion-collapse collapse p-2" [attr.data-bs-parent]="'#accordionExample'">
+      <div class="row2">
+        <div>
+          <b>School details:</b>
+          <div class="mx-3">
+            <b>Address: </b>{{ d.school.address }}<br/>
+            <b>governorate: </b>{{ d.school.governorate }}<br/>
+            <div class="school-info">
+              <div class="info-box">
+                <span class="info-value">{{ d.school.nbr_student }}</span>
+                <span class="info-label">Students</span>
+              </div>
+              <div class="info-box">
+                <span class="info-value">{{ d.school.nbr_teachers }}</span>
+                <span class="info-label">Teachers</span>
+              </div>
+              <div class="info-box">
+                <span class="info-value">{{ d.school.nbr_teachers }}</span>
+                <span class="info-label">Classrooms</span>
+              </div>
+            </div>
+            <b>Needs: </b> <strong>{{ d.school.type_needs }}</strong><br/>
+            {{ d.school.needs }}<br/>
+          </div>
+        </div>
+        <div>
+          <b>Donations details:</b>
+          <table border="1">
+            <tr *ngFor="let det of d.donationDetails">
+              <td class="px-4" style="color: rgb(54, 4, 87);">{{ det.number }}</td>
+              <td class="px-4" style="color: rgb(54, 4, 87);">{{ det.itemType }} </td>
+              <td class="px-4" style="color: rgb(54, 4, 87);">{{ det.description }} </td>
+            </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

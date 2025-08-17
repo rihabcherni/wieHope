@@ -1,0 +1,29 @@
+.line-container {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  flex-grow: 1;
+  border-top: 1px solid #a8a7a7;
+}
+
+.word {
+  padding: 0 10px;
+}
+select {
+  width: 100%;
+  padding: 1.27rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  color: grey;
+  border-radius: 0.25rem;
+  background-color: white;
+  border: none
+}
+.form-floating select:hover {
+  border: 1px solid var(--primary);
+}
+textarea.form-control {
+  height: 100px;
+}

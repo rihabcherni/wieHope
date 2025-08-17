@@ -1,0 +1,82 @@
+<div class="NouvDetails ">
+  <div class=" recentOrders">
+      <div class="cardHeader">
+          <h2>Our Ambassadors</h2>
+      </div>
+      <table *ngIf="ambassador && ambassador.length > 0">
+          <thead>
+              <tr>
+                  <td>Photo</td>
+                  <td>FirstName</td>
+                  <td>LastName</td>
+                  <td>E-mail</td>
+                  <td>Phone Number</td>
+                  <td>Position</td>
+                  <td>School</td>
+                  <td>Action</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let d of ambassador;">
+                <td><img class="r-img" src="http://localhost:5000/uploads/userProfile/{{ d.photo }}"></td>
+                <td>{{ d.firstName }}</td>
+                <td> {{ d.lastName }}</td>
+                <td>{{ d.email }}</td>
+                <td>{{ d.phoneNumber }}</td>
+                <td>{{ d.title }}</td>
+                <td>{{  d.school.name }}</td>
+                <td style="white-space: nowrap;">
+                  <button type="button"  (click)="confirmeAmbassador(d)" style="color: white; width: 32px; font-size: 12px;" class="rounded-5 btn-infos" [ngClass]="{'bg-success': d.confirmation, 'bg-danger': !d.confirmation}" [innerHTML]="confirmationIcon(d)"></button>
+                  <button type="button" class="btn-infos" (click)="openDetailsModal(d)"><i class="fa fa-eye px-3 py-2"></i></button>
+                  <button class="btn-supprimer-donation" (click)="deleteAmbassador(d._id)"><i class="fa fa-trash"></i></button>
+                </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+<div class="modal-overlay" id="modal">
+  <div class="modal-content">
+    <span class="modal-close" (click)="onNoClick()">&times;</span>
+    <h2 class="text-center">Ambassador Details</h2>
+
+    <div *ngIf="selectedAmbassadorSchool">
+      <div class="row align-items-center">
+        <div class="col-5">
+          <div style="text-align: center;">
+            <img class="img-fluid rounded-2" width="250px" style="height: 320px !important;" src="http://localhost:5000/uploads/userProfile/{{ selectedAmbassadorSchool.photo }}" alt="{{ selectedAmbassadorSchool.firstName}}"> <br/><br/>
+          </div>
+         <h4><strong class="text-primary">Name:</strong> {{ selectedAmbassadorSchool.firstName }}  {{ selectedAmbassadorSchool.lastName }}</h4> <br/>
+         <span><strong class="text-primary">Position:</strong> {{ selectedAmbassadorSchool.title }}</span><br/>
+         <span><strong class="text-primary">Gender:</strong> {{ selectedAmbassadorSchool.gender }}</span><br/>
+         <span><strong class="text-primary">Phone number:</strong> {{ selectedAmbassadorSchool.phoneNumber }}</span><br/>
+         <span><strong class="text-primary">E-mail:</strong> {{ selectedAmbassadorSchool.email }}</span> <br/>
+         <span><strong class="text-primary">Address:</strong> {{ selectedAmbassadorSchool.address }}, {{ selectedAmbassadorSchool.governorate }}</span> <br/>
+       </div>
+        <div class="col-7" style="border-left:3px solid grey; padding-left: 30px;">
+          <img class="img-fluid rounded-2" width="380px" height="320px" src="http://localhost:5000/uploads/school/{{ selectedAmbassadorSchool.school.image }}" alt="{{ selectedAmbassadorSchool.school.name }}"> <br/><br/>
+          <h4><strong class="text-primary">School Name:</strong> {{ selectedAmbassadorSchool.school.name }}</h4> <br/>
+         <span><strong class="text-primary">Education level:</strong> {{ selectedAmbassadorSchool.school.niveau }}</span><br/>
+         <span><strong class="text-primary">Location:</strong> {{ selectedAmbassadorSchool.school.address }}, {{ selectedAmbassadorSchool.school.governorate }}</span> <br/>
+         <span><strong class="text-primary">Number of Students:</strong> {{ selectedAmbassadorSchool.school.nbr_student }}</span><br/>
+         <span><strong class="text-primary">Number of Teachers:</strong> {{ selectedAmbassadorSchool.school.nbr_teachers }}</span><br/>
+         <span><strong class="text-primary">Number of classes:</strong> {{ selectedAmbassadorSchool.school.nbr_classes }}</span><br/>
+         <span><strong class="text-primary">Type of needs:</strong> {{ selectedAmbassadorSchool.school.type_needs }}</span><br/>
+         <span><strong class="text-primary">Needs:</strong> {{ selectedAmbassadorSchool.school.needs }}</span><br/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal-overlay" id="modalConf">
+  <div class="modal-content">
+    <span class="modal-close" (click)="onNoClickConfirm()">&times;</span>
+    <h2 class="text-center">Ambassador Confirm</h2>
+
+    <div *ngIf="selectedAmbassadorSchool" class="m-3 text-center" style="font-size: 18px;">
+      <div [innerHTML]="confirmationText(selectedAmbassadorSchool)"></div>
+    </div>
+  </div>
+</div>
