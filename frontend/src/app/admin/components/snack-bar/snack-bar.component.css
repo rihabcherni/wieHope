@@ -1,0 +1,25 @@
+.snackbar {
+  position: fixed;
+  bottom: 40%;
+  left: 50%;
+  z-index: 999;
+  transform: translateX(-50%);
+  padding: 80px ;
+  background-color: white;
+  text-align: center;
+  border:2px solid #af4c9e;
+  font-weight: bold;
+  font-size: 40px;
+  color:purple;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.snackbar.show {
+  opacity: 1;
+}

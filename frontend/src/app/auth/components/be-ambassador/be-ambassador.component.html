@@ -1,0 +1,225 @@
+<div class="container-xxl py-5">
+  <div class="container">
+      <div class="rounded">
+          <div class="row g-5 align-items-center">
+              <div class="col-lg-6 wow fadeIn bg-light rounded" data-wow-delay="0.1s">
+                  <div class="h-100 d-flex flex-column justify-content-center p-5">
+                    <form (ngSubmit)="onSubmit()" method="post" enctype="multipart/form-data" >
+                      <div  *ngIf="currentStep === 1" class="row g-3">
+                        <h1 class="text-center"> School Details </h1>
+                              <div class="col-sm-6">
+                                  <div class="form-floating">
+                                      <input type="text" class="form-control border-0" id="name" name="name" [(ngModel)]="school.name" placeholder="School Name">
+                                      <label for="name">School Name</label>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-floating">
+                                      <input type="text" class="form-control border-0" id="address" name="address" [(ngModel)]="school.address" placeholder="School Address">
+                                      <label for="address">School Address</label>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="form-floating">
+                                  <select id="regionSelect" class="form-select border-0" name="governorate" [(ngModel)]="school.governorate" required>
+                                    <option value="" selected disabled>City</option>
+                                    <option value="Ariana">Ariana</option>
+                                    <option value="Beja">Béja</option>
+                                    <option value="Ben Arous">Ben Arous</option>
+                                    <option value="Bizerte">Bizerte</option>
+                                    <option value="Gabes">Gabès</option>
+                                    <option value="Gafsa">Gafsa</option>
+                                    <option value="Jendouba">Jendouba</option>
+                                    <option value="Kairouan">Kairouan</option>
+                                    <option value="Kasserine">Kasserine</option>
+                                    <option value="Kebili">Kebili</option>
+                                    <option value="kef">Le Kef</option>
+                                    <option value="Mahdia">Mahdia</option>
+                                    <option value="La Manouba">La Manouba</option>
+                                    <option value="Médenine">Médenine</option>
+                                    <option value="Monastir">Monastir</option>
+                                    <option value="Nabeul">Nabeul</option>
+                                    <option value="Sfax">Sfax</option>
+                                    <option value="Sidi Bouzid">Sidi Bouzid</option>
+                                    <option value="Siliana">Siliana</option>
+                                    <option value="Sousse">Sousse</option>
+                                    <option value="Tataouine">Tataouine</option>
+                                    <option value="Tozeur">Tozeur</option>
+                                    <option value="Tunis">Tunis</option>
+                                    <option value="Zaghouan">Zaghouan</option>
+                                  </select>
+                                  <label for="regionSelect">City</label>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="form-floating " >
+                                  <select id="niveau" class="form-select border-0" name="niveau" [(ngModel)]="school.niveau">
+                                    <option value="" selected disabled>Education Level</option>
+                                    <option value="PrimarySchool">Primary School </option>
+                                    <option value="MiddleSchool">MiddleSchool</option>
+                                    <option value="HighSchool">High School</option>
+                                    <option value="University">University</option>
+                                    <option value="Other">Other</option>
+                                  </select>
+                                  <label for="niveau">Education Level</label>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-floating">
+                                    <input type="text" [(ngModel)]="school.nbr_student" name="nbr_student" class="form-control border-0" id="nbr_student" placeholder="Students Number">
+                                    <label for="nbr_student">Students Number</label>
+                                </div>
+                            </div>
+                              <div class="col-sm-4">
+                                <div class="form-floating">
+                                    <input type="text" [(ngModel)]="school.nbr_teachers" name="nbr_teachers" class="form-control border-0" id="nbr_teachers" placeholder="Teachers Number">
+                                    <label for="nbr_teachers">Teachers Number</label>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-floating">
+                                    <input type="text" [(ngModel)]="school.nbr_classes" name="nbr_classes" class="form-control border-0" id="nbr_classes" placeholder="Classes Number">
+                                    <label for="nbr_classes">Classes Number</label>
+                                </div>
+                              </div>
+                              <div class="col-sm-12">
+                                <div class="form-floating">
+                                    <input type="text" [(ngModel)]="school.type_needs" name="type_needs" class="form-control border-0" id="type_needs" placeholder="Type needs">
+                                    <label for="type_needs">Type needs</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                              <div class="form-floating">
+                                  <textarea name="needs" [(ngModel)]="school.needs" name="needs" class="form-control border-0" id="needs" placeholder="needs" cols="58"></textarea>
+                                  <label for="needs">Needs</label>
+                              </div>
+                            </div>
+                              <div class="col-12">
+                                <div class="form-floating">
+                                  <input type="file" accept="image/*" class="form-control border-0" id="image" [(ngModel)]="school.image" (change)="onFileSelected($event)" name="image">
+                                  <label for="image">Image School</label>
+                                </div>
+                              </div>
+                            <div class="col-12">
+                              <button class="btn btn-primary w-100 py-3" type="button" (click)="onSubmit()">Next</button>
+                            </div>
+
+                            <div class="text-center">
+                              <span>Already have an account? </span>
+                              <a [routerLink]="['/login']"> Sign in instead</a>
+                            </div>
+                      </div>
+                      <div  *ngIf="currentStep === 2" class="row g-3">
+                        <h3 class="mb-2 text-uppercase">Register to be an ambassador</h3>
+                        <div class="col-sm-6">
+                          <div class="form-floating">
+                            <input type="text" class="form-control border-0" id="firstName" placeholder="First Name" [(ngModel)]="user.firstName" name="firstName" required>
+                            <label for="firstName">First Name</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-floating">
+                            <input type="text" class="form-control border-0" id="lastName" placeholder="Last Name" [(ngModel)]="user.lastName" name="lastName" required>
+                            <label for="lastName">Last Name</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-floating">
+                            <select [ngClass]="{'form-select border-0': user.gender === 'masculin' || user.gender === 'feminin'}" id="gender" [(ngModel)]="user.gender" name="gender" required>
+                              <option value="" disabled selected>Select Gender</option>
+                              <option value="masculin">Masculin</option>
+                              <option value="feminin">Feminin</option>
+                            </select>
+                            <label for="gender">Gender</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-floating">
+                            <input type="email" class="form-control border-0" id="email" placeholder="Email" [(ngModel)]="user.email" name="email" required>
+                            <label for="email">Email</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-floating">
+                            <input type="text" class="form-control border-0" id="phoneNumber" placeholder="Phone" [(ngModel)]="user.phoneNumber" name="phoneNumber" required>
+                            <label for="phoneNumber">Phone</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-floating " >
+                            <select  [ngClass]="{'form-select border-0': user.title === 'director' || user.title === 'teacher'|| user.title === 'staff'}" id="title" name="title" [(ngModel)]="user.title" required>
+                              <option value="" selected disabled>Choose a role </option>
+                              <option value="director">Director</option>
+                              <option value="teacher">Teacher</option>
+                                <option value="staff">Staff</option>
+                            </select>
+                            <label for="title">Role</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="form-floating">
+                            <input type="text" class="form-control border-0" id="address" placeholder="Address" [(ngModel)]="user.address" name="address" required>
+                            <label for="address">Address</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-floating">
+                            <select id="regionSelect" class="form-select border-0" name="governorate" [(ngModel)]="user.governorate" required>
+                              <option value="" selected disabled>City</option>
+                              <option value="Ariana">Ariana</option>
+                              <option value="Beja">Béja</option>
+                              <option value="Ben Arous">Ben Arous</option>
+                              <option value="Bizerte">Bizerte</option>
+                              <option value="Gabes">Gabès</option>
+                              <option value="Gafsa">Gafsa</option>
+                              <option value="Jendouba">Jendouba</option>
+                              <option value="Kairouan">Kairouan</option>
+                              <option value="Kasserine">Kasserine</option>
+                              <option value="Kebili">Kebili</option>
+                              <option value="kef">Le Kef</option>
+                              <option value="Mahdia">Mahdia</option>
+                              <option value="La Manouba">La Manouba</option>
+                              <option value="Médenine">Médenine</option>
+                              <option value="Monastir">Monastir</option>
+                              <option value="Nabeul">Nabeul</option>
+                              <option value="Sfax">Sfax</option>
+                              <option value="Sidi Bouzid">Sidi Bouzid</option>
+                              <option value="Siliana">Siliana</option>
+                              <option value="Sousse">Sousse</option>
+                              <option value="Tataouine">Tataouine</option>
+                              <option value="Tozeur">Tozeur</option>
+                              <option value="Tunis">Tunis</option>
+                              <option value="Zaghouan">Zaghouan</option>
+                            </select>
+                            <label for="regionSelect">City</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-floating">
+                            <input type="password" class="form-control border-0" id="password" placeholder="Password" [(ngModel)]="user.password" name="password" required>
+                            <label for="password">Password</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating">
+                            <input type="file" accept="image/*" class="form-control border-0" id="photo" [(ngModel)]="user.photo" (change)="onFileSelected($event)" name="photo">
+                            <label for="photo">Photo</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                        </div>
+              </div>
+                    </form>
+                  </div>
+              </div>
+              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="max-height: 400px;">
+                  <div class="position-relative h-100">
+                      <img class=" w-100 h-100 rounded" src="assets/img/visiteur/ambassador.PNG" alt="img-ambassador">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<app-snack-bar [message]="successMessage" [show]="showSuccessMessage"></app-snack-bar>

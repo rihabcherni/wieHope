@@ -1,0 +1,24 @@
+.btn-supprimer-donation {
+  background-color: #dc3545;
+  width: 50px;
+  height: 35px;
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+.btn-supprimer-donation:hover{
+  cursor: pointer;
+  background-color: white;
+  color:rgb(181, 0, 0) !important;
+  border:#dc3545 3px solid !important;
+  border-radius: 5px;
+}
+.r-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+table{
+  font-size: 14px !important;
+}

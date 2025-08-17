@@ -1,0 +1,36 @@
+.img-school{
+  height: 250px;
+  width: 100%;
+}
+
+
+.causes-header::before,
+.causes-header::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10px;
+  top: 0;
+  left: 0;
+  background: url(../../../../assets/img/bg-header-top.png) center center repeat-x;
+  z-index: 9999;
+}
+.causes-header::after {
+  height: 19px;
+  top: auto;
+  bottom: 0;
+  background: url(../../../../assets/img/bg-header-bottom.png) center center repeat-x;
+}
+.causes-header {
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../../../../assets/img/visiteur/causes.PNG) center center no-repeat !important;
+  background-size: cover !important;
+}
+
+.causes-header a{
+  color: rgb(73, 3, 80) !important;
+}
+.causes-header li{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -20px;
+}

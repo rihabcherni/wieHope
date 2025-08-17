@@ -1,0 +1,92 @@
+  <div class="back">
+    <h2 class="title">Schools Requests and Initiatives</h2>
+     <div class="card mb-3" *ngFor="let d of demande">
+         <div class="row g-0">
+             <div class="col-lg-4 px-2 col-12" style="display: flex;justify-content: center;align-items: center;">
+                 <img class="img-fluid rounded-2" width="450px" height="390px" src="http://localhost:5000/uploads/school/{{ d.image }}" alt="{{ d.name }}"> <br/><br/>
+             </div>
+             <div class="col-lg-8 col-12">
+                 <div class="cardb">
+                     <h3 class="cardtitle">Name: {{ d.name }}</h3>
+                     <div> <b class="text-primary">Location: </b> {{ d.address }}, {{ d.governorate }}</div>
+                     <div> <b class="text-primary">School Needs: </b> <b class="text-info">{{ d.type_needs }}</b></div>
+                     <p>{{ d.needs }}</p>
+                     <div class="cardHeader justify-content-end">
+                         <button type="button" class="btn acceptbtn" (click)="acceptSchool(d._id)">Accept Request</button>
+                         <button type="button" class="btn rejectbtn"  (click)="deleteSchool(d._id)">Reject Request</button>
+                     </div>
+                 </div>
+             </div>
+             <button class="position-absolute btn btn-primary" type="button" style="margin:15px 92%; width: 60px;" (click)="openDetailsModal(d)">
+              <i  style="font-size: 18px;" class="fa fa-eye"></i>
+             </button>
+         </div>
+     </div>
+  </div>
+  <div class="back mt-3">
+     <h2 class="title">List of Schools Wie Support</h2>
+     <table class="table mx-auto table-school"  *ngIf="school && school.length > 0" >
+         <thead>
+           <tr>
+             <th class="text-center">School Name</th>
+             <th class="text-center">Location</th>
+             <th class="text-center">Ambassador</th>
+             <th class="text-center">Students</th>
+             <th class="text-center">Teachers</th>
+             <th class="text-center">Date of add</th>
+             <th class="text-center">Action</th>
+           </tr>
+         </thead>
+         <tbody >
+             <tr class="text-center" *ngFor="let s of school ;">
+                 <td>{{ s.name }}</td>
+                 <td>{{ s.address }},{{ s.governorate }}</td>
+                 <td>
+                  <div *ngFor="let a of s.ambassadors ;">
+                    <span class="btn-outline-primary p-1 rounded-2">{{ a.firstName }} {{ a.lastName }}({{ a.title }})</span><br/>
+                  </div>
+                </td>
+                 <td>{{ s.nbr_student }}</td>
+                 <td>{{ s.nbr_teachers }}</td>
+                 <td>{{ s.dateConfirmation }}</td>
+                 <td style="display: grid; grid-template-columns: repeat(2,1fr); gap: 8px;">
+                  <button type="button" class="btn btn-primary" (click)="openDetailsModal(s)"><i style="font-size: 14px;" class="fa fa-eye px-3 py-2"></i></button>
+                  <button type="button" class="btn btn-danger" (click)="deleteSchool(s._id)"><i style="font-size: 14px; color: white;" class="fa fa-trash px-3 py-2"></i></button>
+                </td>
+             </tr>
+        </tbody>
+     </table>
+  </div>
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <span class="modal-close" (click)="onNoClick()">&times;</span>
+      <h2 class="text-center">School Details</h2>
+
+      <div *ngIf="selectedSchool">
+        <div class="row align-items-center">
+          <div class="col-6 text-center">
+            <img class="img-fluid rounded-2" width="380px" height="320px" src="http://localhost:5000/uploads/school/{{ selectedSchool.image }}" alt="{{ selectedSchool.name }}"> <br/><br/>
+            <h4><strong class="text-primary">School Name:</strong> {{ selectedSchool.name }}</h4> <br/>
+          </div>
+          <div class="col-6">
+           <span><strong class="text-primary">Education level:</strong> {{ selectedSchool.niveau }}</span><br/>
+           <span><strong class="text-primary">Location:</strong> {{ selectedSchool.address }}, {{ selectedSchool.governorate }}</span> <br/>
+           <span><strong class="text-primary">Number of Students:</strong> {{ selectedSchool.nbr_student }}</span><br/>
+           <span><strong class="text-primary">Number of Teachers:</strong> {{ selectedSchool.nbr_teachers }}</span><br/>
+           <span><strong class="text-primary">Number of classes:</strong> {{ selectedSchool.nbr_classes }}</span><br/>
+           <span><strong class="text-primary">Type of needs:</strong> {{ selectedSchool.type_needs }}</span><br/>
+           <span><strong class="text-primary">Needs:</strong> {{ selectedSchool.needs }}</span><br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+

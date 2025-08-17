@@ -1,0 +1,98 @@
+
+<!-- Page Header Start -->
+<div class=" py-5 mb-5" style="background: url('../../../../assets/img/visiteur/bg2.jpg') center center repeat-x;">
+  <div class="container py-5">
+      <h1 class="display-3 text-white mb-3 animated slideInDown">Profil</h1>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<div class="profil-container">
+  <div class="cardd">
+      <div style="display: flex;align-items: center;justify-content: center;padding-top: 1rem;">
+          <img src="../../../../assets/img/visiteur/customer01.jpg" class="card-img-top" style="border-radius: 50%;width: 10rem;" alt="...">
+      </div>
+      <div class="card-body">
+        <h5 class="cardtitle" style="text-align: center;">Ambassador profil</h5>
+        <p style="color: black; text-align: center;">
+          As an Ambassador for WieHope, my responsibilities encompass coordinating with schools, managing resources, and ensuring effective allocation of donated funds.
+           I play a vital role in connecting donors with schools, fostering partnerships, and promoting transparency in our initiatives.
+        </p>
+        <div style="display: flex;justify-content: center;">
+          <a  href="" class="btn btn-primary">Edit Profil Picture</a>
+        </div>
+      </div>
+  </div>
+  <div class="cardd">
+    <div style="margin-left: 2rem;margin-right: 2rem;">
+        <form (ngSubmit)="updateAmbassadorProfile()" method="post">
+          <div style="display: flex; justify-content: space-between; align-items: center;margin-bottom: -2rem;">
+            <h4>Profil Settings</h4>
+            <button type="submit" class="btn btn-primary h-25" >Edit Profil</button>
+          </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input">
+                        <label class="labels">First Name</label>
+                        <input type="text" class="form-control" placeholder="First Name" [value]="FirstName" name="firstName" [(ngModel)]="newAmbassador.firstName">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input">
+                        <label class="labels">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last Name" [value]="LastName" name="lastName" [(ngModel)]="newAmbassador.lastName">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 input">
+                <label class="labels">Phone Number</label>
+                <input type="text" class="form-control" placeholder="Phone Number" [value]="PhoneNumber" name="phoneNumber" [(ngModel)]="newAmbassador.phoneNumber">
+            </div>
+              <div class="col-lg-6 input">
+                  <label class="labels">Gender</label>
+                  <input type="text" class="form-control" placeholder="Gender" [value]="Gender"  name="gender" [(ngModel)]="newAmbassador.gender">
+              </div>
+            </div>
+            <div class="col-12 input">
+              <label class="labels">Email Address</label>
+              <input type="text" class="form-control" placeholder="Email Address" [value]="EmailAddress" name="email" [(ngModel)]="newAmbassador.email">
+          </div>
+            <div class="row">
+              <div class="col-lg-6 input">
+                  <label class="labels">Address</label>
+                  <input type="text" class="form-control" placeholder="Address" [value]="address" name="address" [(ngModel)]="newAmbassador.address">
+              </div>
+              <div class="col-lg-6 input">
+                  <label class="labels">Governorate</label>
+                  <input type="text" class="form-control" placeholder="Governorate" [value]="Governorate" name="governorate" [(ngModel)]="newAmbassador.governorate">
+              </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<div class="profil-container2">
+<div>
+  <form (ngSubmit)="changePasswordAmbassador()" method="post">
+    <div style="display: flex; justify-content: space-between; align-items: center;margin: -2rem 0;">
+      <h4>Change Password</h4>
+      <button class="btn mt-4 mb-4 btn-primary" >Change Password</button>
+    </div>
+    <div class="input">
+      <label class="labels">Old Password</label>
+      <input type="password" class="form-control" placeholder="Enter old password" [(ngModel)]="oldPassword" name="oldPassword">
+    </div>
+    <div class="input">
+      <label class="labels">New Password</label>
+      <input type="password" class="form-control" placeholder="Enter new password" [(ngModel)]="newPassword" name="newPassword">
+    </div>
+    <div class="input">
+      <label class="labels">Confirm Password</label>
+      <input type="password" class="form-control" placeholder="Confirm new password" [(ngModel)]="confirmPassword" name="confirmPassword">
+    </div>
+
+  </form>
+
+</div>
+</div>

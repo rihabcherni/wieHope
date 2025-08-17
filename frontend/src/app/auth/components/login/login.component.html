@@ -1,0 +1,55 @@
+<div class="container-xxl py-5">
+  <div class="container">
+      <div class="bg-light rounded">
+          <div class="row g-0">
+              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="h-100 d-flex flex-column justify-content-center p-5">
+                      <h1 class="mb-3 text-center">LOGIN</h1>
+                      <p><b>Welcome to wieHope! 👋🏻 </b></p>
+                       <form (ngSubmit)="onSubmit()">
+                          <div class="row g-3">
+                              <div>
+                                  <div class="form-floating">
+                                      <input type="email" [(ngModel)]="email" class="form-control border-0" id="gmail" placeholder="Email" name="email" required>
+                                      <label for="gmail">Email</label>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="form-floating">
+                                      <input type="password" class="form-control border-0" id="password" placeholder="password" [(ngModel)]="password" name="password" required>
+                                      <label for="phone">Password</label>
+                                  </div>
+                              </div>
+                              <div class="row-2">
+                                <div>
+                                  <input type="checkbox" id="RememberMe" name="RememberMe" value="RememberMe" class="mx-2"/>
+                                  <label for=" RememberMe"> Remember Me</label><br>
+                                </div>
+                                <div>
+                                  <a [routerLink]="['/forgot-password']">Forgot Password?</a>
+                                </div>
+                              </div>
+                              <div>
+                                  <button class="btn btn-primary w-100 py-3" type="submit">Login</button>
+                              </div>
+                              <div>
+                                  <p class="text-center">New on our platform?</p>
+                                  <div class="row-2">
+                                    <a [routerLink]="['/be-donor']">Create a donor account</a>
+                                    <a [routerLink]="['/be-ambassador']">Create an ambassador account</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100 rounded" src="assets/img/visiteur/wieappchar.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  <app-snack-bar [message]="successMessage" [show]="showSuccessMessage"></app-snack-bar>
+</div>

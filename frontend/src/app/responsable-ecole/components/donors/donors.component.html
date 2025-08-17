@@ -1,0 +1,33 @@
+<div class="NouvDetails ">
+  <div class=" recentOrders">
+      <div class="cardHeader">
+          <h2>Our Donors</h2>
+      </div>
+      <table *ngIf="donor && donor.length > 0">
+          <thead>
+              <tr>
+                  <td>Photo</td>
+                  <td>FirstName</td>
+                  <td>LastName</td>
+                  <td>Gender</td>
+                  <td>E-mail</td>
+                  <td>Address</td>
+                  <td>Phone Number</td>
+                  <td>Time Added</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let d of donor;">
+                <td><img class="r-img" src="http://localhost:5000/uploads/userProfile/{{ d.photo }}"></td>
+                <td>{{ d.firstName }}</td>
+                <td> {{ d.lastName }}</td>
+                <td>{{ d.gender }}</td>
+                <td>{{ d.email }}</td>
+                <td>{{ d.address }}, {{ d.governorate }}</td>
+                <td>{{ d.phoneNumber }}</td>
+                <td>{{ d.timeAdded }}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

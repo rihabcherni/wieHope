@@ -1,0 +1,31 @@
+.navbar-nav a{
+  font-weight: 700;
+  font-size: 20px;
+  color: rgb(68, 68, 68);
+}
+.row2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 30px;
+  border-radius: 50px;
+  background-color: rgb(214, 194, 214);
+  color: var(--primary);
+}
+.dropdown {
+  position: fixed;
+  top: 50px;
+  right: 10px; /* Add a unit like pixels */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  z-index: 9999;
+  padding: 20px 10px;
+}
+.s2{
+  display: flex;
+  justify-content: space-between;
+}

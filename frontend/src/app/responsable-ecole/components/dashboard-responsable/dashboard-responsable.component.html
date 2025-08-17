@@ -1,0 +1,93 @@
+<div class="cardsBox">
+  <div class="cardDash">
+        <div class="cardbody">
+          <h4 style="color:rgb(105, 186, 191);"> {{ statistics?.nbr_student }}  <i class="fas fa-school" style="margin-left: 180px;"></i></h4>
+          <p>Total of student in the school </p>
+        </div>
+  </div>
+  <div class="cardDash">
+        <div class="cardbody">
+          <h4 style="color:#fa7e71;">  {{ statistics?.nbr_teachers }}  <i class="fas fa-users" style="margin-left: 180px;"></i></h4>
+          <p>Total of teachers in the school  </p>
+        </div>
+  </div>
+  <div class="cardDash">
+          <div class="cardbody">
+            <h4 style="color:rgb(124, 124, 255);"> {{ statistics?.donations }} <i class="fas fa-users" style="margin-left: 180px;"></i></h4>
+            <p> Total of Donations</p>
+          </div>
+  </div>
+  <div class="cardDash">
+          <div class="cardbody">
+            <h4 style="color:#6fd091;"> {{ statistics?.uniqueDonors }} <i class="fas fa-hand-holding-usd"  style="margin-left: 180px;"></i></h4>
+            <p>Total of donors</p>
+          </div>
+  </div>
+</div>
+<!-- ================ Order Details List ================= -->
+<div class="details">
+  <!-- =========================== charts ======================= -->
+      <div>
+        <!-- <div class="row mb-3">
+          <div class="col-md-6">
+            <div id="BarChart"  >
+              <canvas id="statisticsBarChart"></canvas>
+            </div>
+
+          </div>
+          <div class="col-md-6" >
+            <div id="LineChart" >
+                <canvas id="statisticsLineChart" ></canvas>
+            </div>
+          </div>
+        </div> -->
+        <div class="row">
+          <div class="recentOrders">
+            <div class="cardHeader">
+              <h2>Latest Donations</h2>
+              <a [routerLink]="['/responsable-ecole/donations']" class="btn">View All</a>
+            </div>
+            <div *ngIf="donation && donation.length > 0">
+              <table class="tab-donation">
+                <thead>
+                  <tr style=" color :rgb(177, 51, 216) ; font-size: 18px; font-weight: bold; text-align: left;">
+                    <th>Donor</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <!-- <th>Quantity/Amount</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let d of donation; let i = index" style="text-align: left;">
+                    <td>{{ d.donor.firstName }} {{ d.donor.lastName }}</td>
+                    <td>{{ d.school.type_needs }}</td>
+                    <td>{{ d.formattedDate }}</td>
+                    <!-- <td>{{ d.donationDetails.number }}</td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class=" recentCustomers">
+        <div class="cardHeader">
+            <h2>Recent Donor</h2>
+            <a [routerLink]="['/responsable-ecole/donors']" class="btn">View All</a>
+        </div>
+        <div >
+          <table>
+            <tr *ngFor="let d of uniqueDonors">
+                  <td width="60px">
+                      <div class="imgBx"><img src="http://localhost:5000/uploads/userProfile/{{ d.donor.photo }}" alt=""></div>
+                  </td>
+                  <td>
+                      <h4>{{ d.donor.firstName }} {{ d.donor.lastName }} <br> <span>{{ d.donor.email }}  {{ d.donor.governorate }}</span></h4>
+
+                  </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+    </div>

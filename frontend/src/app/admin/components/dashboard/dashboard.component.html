@@ -1,0 +1,105 @@
+<div>
+  <div *ngIf="statistics" class="cardsBox">
+    <div class="cardDash">
+      <div class="cardbody">
+        <h4 style="color:rgb(105, 186, 191);">  {{ statistics?.nb_schools }}  <i class="fas fa-school " style="margin-left: 170px;"></i></h4>
+        <p>School</p>
+      </div>
+    </div>
+    <div class="cardDash">
+          <div class="cardbody">
+            <h4 style="color:#fa7e71;"> {{ statistics?.nb_ambassadors }}  <i class="fas fa-users" style="margin-left: 160px;"></i></h4>
+            <p>Ambassadors</p>
+          </div>
+    </div>
+    <div class="cardDash">
+            <div class="cardbody">
+              <h4 style="color:rgb(124, 124, 255);">{{ statistics?.nb_donors }}<i class="fas fa-users" style="margin-left: 180px;"></i></h4>
+              <p>Donors</p>
+            </div>
+    </div>
+    <div class="cardDash">
+            <div class="cardbody">
+              <h4 style="color:#6fd091;">{{ statistics?.nb_donations }}<i class="fas fa-hand-holding-usd"  style="margin-left: 180px;"></i></h4>
+              <p>Donations</p>
+            </div>
+    </div>
+  </div>
+  <div class="details">
+    <div>
+      <div class="mb-3" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; margin: 0 -10px;">
+          <div id="LineChart" *ngIf="schoolStatistics">
+            <canvas id="statisticsLineChart"></canvas>
+          </div>
+          <div id="BarChart" >
+              <canvas id="statisticsBarChartDonation" ></canvas>
+          </div>
+      </div>
+      <div class="row">
+        <div class=" recentOrders">
+          <div class="cardHeader">
+              <h2>Latest Donations</h2>
+              <a [routerLink]="['/admin/donation']" class="btn">View All</a>
+          </div>
+          <div *ngIf="lastDonation && lastDonation.length > 0">
+            <table class="tab-donation">
+                <thead>
+                    <tr>
+                        <td>School</td>
+                        <td>Donation</td>
+                        <td>Donor</td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let donation of lastDonation">
+                    <td>{{ donation.school.name }}</td>
+                    <td>
+                     {{ donation.dateDonation }}
+                    </td>
+                    <td>{{ donation.donor.firstName }} {{ donation.donor.lastName }}</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="recentCustomers mb-2">
+        <div class="cardHeader">
+            <h4>Recent Donor</h4>
+            <a [routerLink]="['/admin/donors']" class="btn">View All</a>
+        </div>
+        <div *ngIf="lastDonor && lastDonor.length > 0">
+          <table>
+            <tr *ngFor="let donor of lastDonor"  style="margin: 0px !important;">
+                <td width="60px">
+                  <div class="imgBx"><img src="http://localhost:5000/uploads/userProfile/{{ donor.photo }}" alt=""></div>
+                </td>
+                <td>
+                  <h4>{{ donor.firstName}} {{ donor.lastName}} <br> <span>{{ donor.governorate }}</span></h4>
+                </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class=" recentCustomers">
+        <div class="cardHeader">
+            <h4>Schools need help</h4>
+            <a [routerLink]="['/donor/schools-needs']" class="btn">View All</a>
+        </div>
+        <div *ngIf="lastSchool && lastSchool.length > 0">
+          <table>
+            <tr *ngFor="let school of lastSchool">
+                <td>
+                  <h4>{{ school.name }} (<span>{{ school.governorate }}) </span></h4>
+                  <span style="font-size: 12px;"><b>Needs: </b>{{ school.type_needs }} </span>
+                </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-snack-bar [message]="successMessage" [show]="showSuccessMessage"></app-snack-bar>
+</div>

@@ -1,0 +1,15 @@
+.read-more {
+  margin-top: 1rem;
+}
+
+.read-more button {
+
+  color: #fff;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.full-text {
+  display: none;
+}
