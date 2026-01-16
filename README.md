@@ -1,13 +1,14 @@
 # WIE Hope — Donations for Schools
 **TSYP Competition Project**
+
 <div align="center">
   <img src="frontend/src/assets/img/visiteur/logo.png" width="200" alt="Wie Hope Logo"/>
-</div>>
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 [![Angular](https://img.shields.io/badge/Angular-16-red.svg)](https://angular.io/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6+-green.svg)](https://www.mongodb.com/)
 [![License](https://img.shields.io/badge/License-Educational-blue.svg)]()
+</div>
 
 A full-stack web application developed by the **IEEE ENSIT WIE Affinity Group** to connect donors with underserved schools and ensure transparent, impactful donations.
 
@@ -117,35 +118,42 @@ MongoDB Database
 
 ## 🖼️ Screenshots
 
-### Visitor Interface
+### 👤 Visitor Interface
+
 | Screen | Description | Path |
-|--------|-------------|------|
-| **Home Page** | Landing page with featured campaigns | ![Home](docs/screenshots/home.png) |
-| **Our Causes** | Browse all active school campaigns | ![Causes](docs/screenshots/causes.png) |
-| **Donation Form** | Secure donation process | ![Donation](docs/screenshots/donation.png) |
-| **About Us** | Organization information | ![About](docs/screenshots/about.png) |
+|------|------------|------|
+| **Home Page** | Landing page presenting the platform and highlighted school campaigns | ![Home](screenshots/home.png) |
+| **About Us** | Information about the organization and mission | ![About Us](screenshots/about.png) |
+| **Our Causes** | List of active school needs and campaigns | ![Our Causes](screenshots/causes.png) |
+| **Donation Form** | Secure donation form for supporting a selected cause | ![Donation](screenshots/donation.png) |
+| **Contact Us** | Contact form for inquiries and support | ![Contact](screenshots/contact.png) |
+| **Login** | Authentication page for donors and ambassadors | ![Login](screenshots/login.png) |
+| **Become a Donor** | Registration page for donors | ![Be Donor](screenshots/be-donor.png) |
+| **Become an Ambassador** | Registration page for school ambassadors | ![Be Ambassador](screenshots/be-ambassador.png) |
+| **Forgot Password** | Password recovery request page | ![Forgot Password](screenshots/forgot-password.png) |
+| **Reset Password** | Password reset page | ![Reset Password](screenshots/reset-password.png) |
 
 ### Donor Dashboard
 | Screen | Description | Path |
 |--------|-------------|------|
-| **Dashboard** | Overview of donations and impact | ![Donor Dashboard](docs/screenshots/donor-dashboard.png) |
-| **Donation History** | Complete donation records | ![History](docs/screenshots/donation-history.png) |
-| **Schools Needs** | Browse needs by school | ![Needs](docs/screenshots/schools-needs.png) |
+| **Dashboard** | Overview of donations and impact | ![Donor Dashboard](screenshots/donor-dashboard.png) |
+| **Donation History** | Complete donation records | ![History](screenshots/donation-history.png) |
+| **Schools Needs** | Browse needs by school | ![Needs](screenshots/schools-needs.png) |
 
 ### Ambassador Interface
 | Screen | Description | Path |
 |--------|-------------|------|
-| **Dashboard** | School statistics and overview | ![Ambassador](docs/screenshots/ambassador-dashboard.png) |
-| **School Management** | Manage needs and campaigns | ![Management](docs/screenshots/school-management.png) |
-| **Donors List** | View contributing donors | ![Donors](docs/screenshots/donors-list.png) |
+| **Dashboard** | School statistics and overview | ![Ambassador](screenshots/ambassador-dashboard.png) |
+| **School Management** | Manage needs and campaigns | ![Management](screenshots/school-management.png) |
+| **Donors List** | View contributing donors | ![Donors](screenshots/donors-list.png) |
 
 ### Admin Panel
 | Screen | Description | Path |
 |--------|-------------|------|
-| **Admin Dashboard** | System-wide analytics | ![Admin](docs/screenshots/admin-dashboard.png) |
-| **School Management** | Manage all schools | ![Schools](docs/screenshots/admin-schools.png) |
-| **Donor Management** | Manage donor accounts | ![Donor Mgmt](docs/screenshots/admin-donors.png) |
-| **Ambassador Management** | Manage ambassadors | ![Ambassador Mgmt](docs/screenshots/admin-ambassadors.png) |
+| **Admin Dashboard** | System-wide analytics | ![Admin](screenshots/admin-dashboard.png) |
+| **School Management** | Manage all schools | ![Schools](screenshots/admin-schools.png) |
+| **Donor Management** | Manage donor accounts | ![Donor Mgmt](screenshots/admin-donors.png) |
+| **Ambassador Management** | Manage ambassadors | ![Ambassador Mgmt](screenshots/admin-ambassadors.png) |
 
 > 💡 **Tip**: Keep screenshots at **1200-1400px** width and compress using [TinyPNG](https://tinypng.com/)
 
