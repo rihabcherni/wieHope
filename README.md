@@ -1,4 +1,4 @@
-# 🌍 WIE Hope — Donations for Schools
+# WIE Hope — Donations for Schools
 **TSYP Competition Project**
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
@@ -24,11 +24,9 @@ Enable individuals and organizations to:
 
 ```
 ┌─────────────────┐         ┌─────────────────┐         ┌─────────────────┐
-│                 │         │                 │         │                 │
 │  Angular 16     │ ◄─────► │  Node.js +      │ ◄─────► │    MongoDB      │
 │  Frontend       │  HTTP   │  Express API    │         │    Database     │
 │  (Port 4200)    │  + JWT  │  (Port 5000)    │         │                 │
-│                 │         │                 │         │                 │
 └─────────────────┘         └─────────────────┘         └─────────────────┘
 ```
 
@@ -41,7 +39,7 @@ Angular Client
     ↓
 Express REST API
     ↓
-Mongoose ODM
+Mongoose 
     ↓
 MongoDB Database
 ```
@@ -64,7 +62,7 @@ MongoDB Database
 - **Node.js 18+** - JavaScript runtime
 - **Express.js 4** - Web application framework
 - **MongoDB 8** - NoSQL database
-- **Mongoose** - MongoDB ODM
+- **Mongoose** - MongoDB 
 - **JWT** - Authentication tokens
 - **bcrypt** - Password hashing
 - **Multer** - File upload middleware
@@ -489,14 +487,12 @@ wie-hope/
 
 ```bash
 ng build --configuration production
-# Deploy dist/ folder
 ```
 ---
 
 ## 🤝 Contributors
 
-- **IEEE ENSIT WIE Affinity Group**
-- TSYP Competition Team 2024
+- **IEEE ENSIT WIE Affinity Group** (TSYP Competition Team 2024)
 
 ---
 
@@ -505,11 +501,7 @@ ng build --configuration production
 This project is for **educational and competition purposes**.
 
 ---
-
 <div align="center">
-
 **✨ Empowering education through transparent giving ✨**
-
 Made with ❤️ by IEEE ENSIT WIE
-
 </div>
