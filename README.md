@@ -1,6 +1,8 @@
 # WIE Hope — Donations for Schools
 **TSYP Competition Project**
-
+<div align="center">
+  <img src="frontend/src/assets/img/visiteur/logo.png" width="200" alt="Wie Hope Logo"/>
+</div>>
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 [![Angular](https://img.shields.io/badge/Angular-16-red.svg)](https://angular.io/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6+-green.svg)](https://www.mongodb.com/)
@@ -467,39 +469,20 @@ wie-hope/
 │   ├── angular.json
 │   ├── package.json
 │   └── tsconfig.json
-│
 ├── screenshots/│
 ├── .gitignore
 └── README.md
 ```
 ---
-
-## 🚀 Deployment
-
-### Backend Deployment (Render/Railway/Heroku)
-
-1. Push to GitHub
-2. Connect repository
-3. Set environment variables
-4. Deploy
-
-### Frontend Deployment (Vercel/Netlify)
-
-```bash
-ng build --configuration production
-```
----
-
 ## 🤝 Contributors
 
-- **IEEE ENSIT WIE Affinity Group** (TSYP Competition Team 2024)
+- **IEEE ENSIT WIE Affinity Group** — *TSYP Competition Team 2024*
 
----
+This project is developed for **educational and competition purposes**.
 
-## 📄 License
-
-This project is for **educational and competition purposes**.
 <div align="center">
 
-**✨ Empowering education through transparent giving ✨** (Made with ❤️ by IEEE ENSIT WIE)
+✨ **Empowering education through transparent giving** ✨  
+Made with ❤️ by **IEEE ENSIT WIE**
+
 </div>
