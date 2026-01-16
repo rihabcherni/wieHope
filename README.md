@@ -133,21 +133,6 @@ MongoDB Database
 | **Forgot Password** | Password recovery request page | ![Forgot Password](screenshots/forgot-password.png) |
 | **Reset Password** | Password reset page | ![Reset Password](screenshots/reset-password.png) |
 
-### Donor Dashboard
-| Screen | Description | Path |
-|--------|-------------|------|
-| **Dashboard** | Overview of donations and impact | ![Donor Dashboard](screenshots/donor/donor-dashboard.png) |
-| **Donation History** | Complete donation records | ![History](screenshots/donor/donation-history.png) |
-| **Schools Needs** | Browse needs by school | ![Needs](screenshots/donor/schools-needs.png) |
-
-### Ambassador Interface
-| Screen | Description | Path |
-|--------|-------------|------|
-| **Dashboard** | School statistics and overview | ![Ambassador](screenshots/ambassador/ambassador-dash.png) |
-| **School Management** | Manage needs and campaigns | ![Management](screenshots/ambassador/ambassador-needs.png) |
-| **Donors List** | View contributing donations | ![Donations](screenshots/ambassador/ambassador-donations.png) |
-| **Ambassador Profile** | View and update ambassador profile information | ![Ambassador Profile](screenshots/ambassador/ambassador-profil.png) |
-
 ### Admin Panel
 
 | Screen | Description | Preview |
@@ -160,6 +145,21 @@ MongoDB Database
 | **Donor Management** | Manage donor accounts and profiles | ![Donor Management](screenshots/admin/admin-donors.jpg) |
 | **Ambassador Management** | Manage school ambassadors | ![Ambassador Management](screenshots/admin/admin-ambassadors.jpg) |
 | **Admin Profile** | View and update admin profile information | ![Admin Profile](screenshots/admin/admin-profil.png) |
+
+### Donor Dashboard
+| Screen | Description | Path |
+|--------|-------------|------|
+| **Dashboard** | Overview of donations and impact | ![Donor Dashboard](screenshots/donor/donor-dash.png) |
+| **Donation History** | Complete donation records | ![History](screenshots/donor/donation-history.png) |
+| **Schools Needs** | Browse needs by school | ![Needs](screenshots/donor/schools-needs.png) |
+
+### Ambassador Interface
+| Screen | Description | Path |
+|--------|-------------|------|
+| **Dashboard** | School statistics and overview | ![Ambassador](screenshots/ambassador/ambassador-dash.png) |
+| **School Management** | Manage needs and campaigns | ![Management](screenshots/ambassador/ambassador-needs.png) |
+| **Donors List** | View contributing donations | ![Donations](screenshots/ambassador/ambassador-donations.png) |
+| **Ambassador Profile** | View and update ambassador profile information | ![Ambassador Profile](screenshots/ambassador/ambassador-profil.png) |
 
 ---
 
