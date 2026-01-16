@@ -52,6 +52,7 @@ export class GestionEcoleComponent {
           };
         });
         this.demande = formattedSchools;
+        console.log(data);
       },
       (error: any) => {
         console.error('Error fetching schools:', error);

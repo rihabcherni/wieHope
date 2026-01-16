@@ -123,9 +123,9 @@ MongoDB Database
 | Screen | Description | Path |
 |------|------------|------|
 | **Home Page** | Landing page presenting the platform and highlighted school campaigns | ![Home](screenshots/home.png) |
+|![Home2](screenshots/home-2.png) | ![Home3](screenshots/home-3.png)  | ![Home4](screenshots/home-4.png) |
 | **About Us** | Information about the organization and mission | ![About Us](screenshots/about.png) |
 | **Our Causes** | List of active school needs and campaigns | ![Our Causes](screenshots/causes.png) |
-| **Donation Form** | Secure donation form for supporting a selected cause | ![Donation](screenshots/donation.png) |
 | **Contact Us** | Contact form for inquiries and support | ![Contact](screenshots/contact.png) |
 | **Login** | Authentication page for donors and ambassadors | ![Login](screenshots/login.png) |
 | **Become a Donor** | Registration page for donors | ![Be Donor](screenshots/be-donor.png) |

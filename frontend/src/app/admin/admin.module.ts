@@ -11,7 +11,6 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { DonationsComponent } from './components/donations/donations.component';
 import { DatePipe } from '@angular/common';
 import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     SideBarComponent,
     DonationsComponent,
     SnackBarComponent,
-    ContactUsComponent,
   ],
   imports: [
     CommonModule,

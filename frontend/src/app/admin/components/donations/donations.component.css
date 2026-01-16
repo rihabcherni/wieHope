@@ -1,97 +1,324 @@
-.accordion-item{
-  background-color: rgb(255, 255, 255)!important;
+.accordion-item {
+  background-color: #fff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
+
+.accordion-item:hover {
+  box-shadow: 0 4px 16px rgba(138, 43, 226, 0.15);
+  transform: translateY(-2px);
+}
+
 .accordion-button {
-  background-color: rgb(212, 164, 252)!important;
-  color: black;
+  background: linear-gradient(135deg, #d4a4fc 0%, #b87eeb 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 20px 24px !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: none !important;
 }
-.row-accordion{
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #8a2be2 0%, #7b1fa2 100%) !important;
+  color: #fff !important;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.25) !important;
+}
+
+.accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+.row-accordion {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  color: rgb(104, 104, 104);
-  font-weight: bold;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  color: #fff;
+  font-weight: 600;
   text-align: center;
   align-items: center;
 }
-.donor-detail{
+
+.accordion b {
+  color: #fff;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.border-right {
+  position: relative;
+  padding-right: 20px;
+}
+
+.border-right::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.border-right:last-child::after {
+  display: none;
+}
+
+/* ========================================
+   DONOR DETAILS - MODERN CARD
+   ======================================== */
+.donor-detail {
   display: grid;
   grid-template-columns: 60px 1fr;
-  gap: 10px;
-  margin: 0 20px;
+  gap: 12px;
+  align-items: center;
 }
-.accordion b{
-  color: blueviolet;
+
+.donor-detail img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
-.row2{
+
+.donor-detail img:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ========================================
+   ACCORDION BODY
+   ======================================== */
+.accordion-collapse {
+  background: linear-gradient(to bottom, #fafafa 0%, #fff 100%);
+  padding: 24px !important;
+}
+
+/* ========================================
+   LAYOUT
+   ======================================== */
+.row2 {
   display: grid;
   grid-template-columns: 55% 45%;
+  gap: 24px;
 }
 
+.row2 > div {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s ease;
+}
 
-/* Apply styles to the entire table */
+.row2 > div:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #d4a4fc;
+}
+
+.row2 b {
+  color: #8a2be2;
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0e6ff;
+}
+
+/* ========================================
+   TABLE STYLES - MODERN CLEAN LOOK
+   ======================================== */
 table {
   width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Style table header */
 thead {
-  background-color: #f2f2f2;
+  background: linear-gradient(135deg, #8a2be2 0%, #7b1fa2 100%);
 }
 
-/* Style table header cells */
 th {
-  padding: 12px;
+  padding: 14px 16px;
   text-align: left;
-  border-bottom: 2px solid #ddd;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.5px;
+  border: none;
 }
 
-/* Style alternating rows in the table body */
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Style table cells */
 td {
-  padding: 5px 10px;
+  padding: 12px 16px;
   text-align: left;
-  border: 2px solid #ddd;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  color: #36045b !important;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 }
 
-/* Hover effect for table rows */
+tbody tr {
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
 tbody tr:hover {
-  background-color: #e0e0e0;
+  background-color: #f5ebff;
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(138, 43, 226, 0.1);
 }
 
+tbody tr:last-child td {
+  border-bottom: none;
+}
 
+/* ========================================
+   SCHOOL INFO BOXES - MODERN CARDS
+   ======================================== */
 .school-info {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 16px 0;
 }
 
 .info-box {
-  border: 1px solid #ccc;
-  background-color: rgb(204, 204, 204);
-  border-radius: 10px;
-  padding: 5px;
-  margin:5px 10px ;
+  background: linear-gradient(135deg, #f8f4ff 0%, #fff 100%);
+  border: 2px solid #e8d9ff;
+  border-radius: 12px;
+  padding: 16px 12px;
   text-align: center;
-  color: rgb(96, 4, 124);
+  color: #60047c;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
+.info-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #8a2be2 0%, #7b1fa2 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.info-box:hover::before {
+  opacity: 1;
+}
+
+.info-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.25);
+  border-color: #8a2be2;
+}
+
+.info-value,
 .info-label {
-  display: block;
-  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
 .info-value {
   display: block;
-  font-size: 1.1em;
-}
-.info-box:hover{
-  background-color: rgb(90, 4, 107);
-  color: #ccc !important;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #8a2be2;
+  margin-bottom: 4px;
 }
 
+.info-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #60047c;
+}
+
+.info-box:hover .info-value,
+.info-box:hover .info-label {
+  color: #fff;
+}
+
+/* ========================================
+   CARD HEADER
+   ======================================== */
+.cardHeader h2 {
+  color: #8a2be2;
+  font-weight: 700;
+  font-size: 2em;
+  border-bottom: 3px solid #d4a4fc;
+  display: inline-block;
+}
+
+.back{
+    position: relative;
+    min-height: 500px;
+    margin: 5px;
+    padding:10px 20px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 992px) {
+  .row-accordion {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: left;
+  }
+  
+  .border-right::after {
+    display: none;
+  }
+  
+  .row2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .school-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion-button {
+    padding: 16px !important;
+  }
+  
+  .donor-detail {
+    grid-template-columns: 50px 1fr;
+    gap: 8px;
+  }
+}

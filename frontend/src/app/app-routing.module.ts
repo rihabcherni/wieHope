@@ -17,7 +17,6 @@ import { HistoriqueDonsComponent } from './donateur/components/historique-dons/h
 import { ListeBesoinsComponent } from './donateur/components/liste-besoins/liste-besoins.component';
 import { AboutUsComponent } from './visiteur/components/about-us/about-us.component';
 import { ContactUsComponent } from './visiteur/components/contact-us/contact-us.component';
-import { ContactUsComponent as ContactUsAdminComponent } from './admin/components/contact-us/contact-us.component';
 import { DonationFormComponent } from './visiteur/components/donation-form/donation-form.component';
 import { CausesComponent } from './visiteur/components/causes/causes.component';
 import { Page404Component } from './visiteur/page404/page404.component';
@@ -50,7 +49,6 @@ const routes: Routes = [
     {path:'schools', component:GestionEcoleComponent},
     {path:'donors', component:GestionDonateurComponent},
     {path:'profil', component:ProfilAdminComponent},
-    {path:'contact-us', component:ContactUsAdminComponent},
     {path:'donation',component:DonationsComponent},
     {path:'donor-management', component:GestionDonateurComponent},
     {path:'ambassador-management', component:GestionResponsableComponent},
