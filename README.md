@@ -136,16 +136,17 @@ MongoDB Database
 ### Donor Dashboard
 | Screen | Description | Path |
 |--------|-------------|------|
-| **Dashboard** | Overview of donations and impact | ![Donor Dashboard](screenshots/donor-dashboard.png) |
-| **Donation History** | Complete donation records | ![History](screenshots/donation-history.png) |
-| **Schools Needs** | Browse needs by school | ![Needs](screenshots/schools-needs.png) |
+| **Dashboard** | Overview of donations and impact | ![Donor Dashboard](screenshots/donor/donor-dashboard.png) |
+| **Donation History** | Complete donation records | ![History](screenshots/donor/donation-history.png) |
+| **Schools Needs** | Browse needs by school | ![Needs](screenshots/donor/schools-needs.png) |
 
 ### Ambassador Interface
 | Screen | Description | Path |
 |--------|-------------|------|
-| **Dashboard** | School statistics and overview | ![Ambassador](screenshots/ambassador-dashboard.png) |
-| **School Management** | Manage needs and campaigns | ![Management](screenshots/school-management.png) |
-| **Donors List** | View contributing donors | ![Donors](screenshots/donors-list.png) |
+| **Dashboard** | School statistics and overview | ![Ambassador](screenshots/ambassador/ambassador-dash.png) |
+| **School Management** | Manage needs and campaigns | ![Management](screenshots/ambassador/ambassador-needs.png) |
+| **Donors List** | View contributing donations | ![Donations](screenshots/ambassador/ambassador-donations.png) |
+| **Ambassador Profile** | View and update ambassador profile information | ![Ambassador Profile](screenshots/ambassador/ambassador-profil.png) |
 
 ### Admin Panel
 
