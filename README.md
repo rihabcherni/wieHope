@@ -3,6 +3,7 @@
 <div align="center">
   <img src="frontend/src/assets/img/visiteur/logo.png" width="200" alt="Wie Hope Logo"/>
 </div>>
+
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 [![Angular](https://img.shields.io/badge/Angular-16-red.svg)](https://angular.io/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6+-green.svg)](https://www.mongodb.com/)
