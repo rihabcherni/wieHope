@@ -148,14 +148,17 @@ MongoDB Database
 | **Donors List** | View contributing donors | ![Donors](screenshots/donors-list.png) |
 
 ### Admin Panel
-| Screen | Description | Path |
-|--------|-------------|------|
-| **Admin Dashboard** | System-wide analytics | ![Admin](screenshots/admin-dashboard.png) |
-| **School Management** | Manage all schools | ![Schools](screenshots/admin-schools.png) |
-| **Donor Management** | Manage donor accounts | ![Donor Mgmt](screenshots/admin-donors.png) |
-| **Ambassador Management** | Manage ambassadors | ![Ambassador Mgmt](screenshots/admin-ambassadors.png) |
 
-> 💡 **Tip**: Keep screenshots at **1200-1400px** width and compress using [TinyPNG](https://tinypng.com/)
+| Screen | Description | Preview |
+|------|------------|---------|
+| **Admin Dashboard** | Global statistics and platform analytics | ![Admin Dashboard](screenshots/admin/admin-dash.jpg) |
+| **School Management** | Manage registered schools | ![School Management](screenshots/admin/admin-school.jpg) |
+| **School Details** | View detailed information and needs of a school | ![School Details](screenshots/admin/admin-school-details.jpg) |
+| **Donations Management** | Track and manage all donations | ![Donations](screenshots/admin/admin-donations.jpg) |
+| **Donation Details** | View detailed donation information | ![Donation Details](screenshots/admin/admin-donations-details.jpg) |
+| **Donor Management** | Manage donor accounts and profiles | ![Donor Management](screenshots/admin/admin-donors.jpg) |
+| **Ambassador Management** | Manage school ambassadors | ![Ambassador Management](screenshots/admin/admin-ambassadors.jpg) |
+| **Admin Profile** | View and update admin profile information | ![Admin Profile](screenshots/admin/admin-profil.png) |
 
 ---
 
