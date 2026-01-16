@@ -499,9 +499,7 @@ ng build --configuration production
 ## 📄 License
 
 This project is for **educational and competition purposes**.
-
----
 <div align="center">
-**✨ Empowering education through transparent giving ✨**
-Made with ❤️ by IEEE ENSIT WIE
+
+**✨ Empowering education through transparent giving ✨** (Made with ❤️ by IEEE ENSIT WIE)
 </div>
