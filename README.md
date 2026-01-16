@@ -493,6 +493,7 @@ wie-hope/
 
 This project is developed for **educational and competition purposes**.
 
+---
 <div align="center">
 
 ✨ **Empowering education through transparent giving** ✨  
